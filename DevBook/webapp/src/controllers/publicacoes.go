@@ -1,16 +1,19 @@
 package controllers
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"net/http"
+	"webapp/src/config"
+	"webapp/src/requisicoes"
+	"webapp/src/respostas"
 )
 
 // CriarPublicacao chama a API para cadastar a publicaçao no banco de dados
 func CriarPublicacao(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Criando Publicação")
-}
 
-/*	r.ParseForm()
+	r.ParseForm()
 
 	publicacao, erro := json.Marshal(map[string]string{
 		"titulo":   r.FormValue("titulo"),
@@ -41,4 +44,3 @@ func CriarPublicacao(w http.ResponseWriter, r *http.Request) {
 	respostas.JSON(w, response.StatusCode, nil)
 
 }
-*/

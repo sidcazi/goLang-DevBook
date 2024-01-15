@@ -5,13 +5,13 @@ function CriarPublicacao(evento){
 
     $.ajax({
         url: "/publicacoes",
-        mehtod: "POST",
+        method: "POST",
         data:{
             titulo: $('#titulo').val(),
             conteudo: $('#conteudo').val(),
         } 
     }).done(function(){
-        alert("Publicação Criada com Sucesso");
+      window.location = "/home";
     }).fail(function(){
         alert("Erro ao criar Publicacao");
     })
